@@ -1,0 +1,34 @@
+<div style="padding: 2rem 1rem; background-color: rgb(228, 232, 245)">
+  <mat-card fxLayout="column" style="padding: 3rem 2rem">
+    <h1>Visitors List</h1>
+    <table mat-table [dataSource]="users" class="mat-elevation-z8">
+      <ng-container matColumnDef="nik">
+        <th mat-header-cell *matHeaderCellDef>NIK</th>
+        <td mat-cell *matCellDef="let user">{{ user.nik }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let user">{{ user.nama }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="birth_date">
+        <th mat-header-cell *matHeaderCellDef>Birth Date</th>
+        <td mat-cell *matCellDef="let user">{{ user.tanggal_lahir }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="gender">
+        <th mat-header-cell *matHeaderCellDef>Gender</th>
+        <td mat-cell *matCellDef="let user">{{ user.jenis_kelamin }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef>Address</th>
+        <td mat-cell *matCellDef="let user">{{ user.alamat }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="visitorColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: visitorColumns"></tr>
+    </table>
+  </mat-card>
+</div>

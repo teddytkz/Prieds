@@ -1,0 +1,77 @@
+<div style="padding: 2rem 1rem; background-color: rgb(228, 232, 245)">
+  <mat-card
+    fxLayout="column"
+    fxFlex="100"
+    fxFlex.gt-xs="80"
+    fxFlex.gt-sm="60"
+    style="padding: 3rem 1.5rem"
+  >
+    <h1>Visitors Details</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>NIK</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="NIK"
+        [(ngModel)]="user.nik"
+        name="nik"
+        id="nik"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        placeholder="Name Visitor"
+        required
+        [(ngModel)]="user.name"
+        name="name"
+        id="name"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Birth Date</mat-label>
+      <input
+        matInput
+        required
+        type="date"
+        [(ngModel)]="user.birth_date"
+        name="birth_date"
+        id="birth_date"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Gender</mat-label>
+      <mat-select [(ngModel)]="user.gender" name="gender" id="gender">
+        <mat-option value="Laki-Laki">Male</mat-option>
+        <mat-option value="Perempuan">Female</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Address</mat-label>
+      <input
+        matInput
+        placeholder="Address"
+        required
+        [(ngModel)]="user.address"
+        name="address"
+        id="address"
+      />
+    </mat-form-field>
+
+    <div fxLayout="row" fxLayoutGap="8px">
+      <button
+        mat-raised-button
+        color="primary"
+        fxFlex="100"
+        (click)="saveUser()"
+      >
+        Submit
+      </button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Data submitted successfully</h4>
+    </div>
+  </mat-card>
+</div>
