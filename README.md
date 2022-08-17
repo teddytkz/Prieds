@@ -9,7 +9,7 @@ it will start on http://localhost:3000
 To Test use Example Postman : <a href="https://github.com/teddytkz/Prieds/blob/main/Prieds.postman_collection.json">Prieds.postman_collection.json</a>
 
 ## Prieds Frontend
-Folder : testing-main<br>
+Folder : testing-app<br>
 How To Start :
 - npm install or yarn install
 - ng server
