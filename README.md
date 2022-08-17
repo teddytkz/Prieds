@@ -12,7 +12,7 @@ To Test use Example Postman : <a href="https://github.com/teddytkz/Prieds/blob/m
 Folder : testing-app<br>
 How To Start :
 - npm install or yarn install
-- ng server
+- ng serve
 
 it will start on http://localhost:4200 <br>
 *notes : testing-api (backend) must be start because Frontend use api from backend
